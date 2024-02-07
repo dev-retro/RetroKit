@@ -10,7 +10,8 @@ let package = Package(
         .library(
             name: "RetroSwift",
             type: .dynamic,
-            targets: ["RetroSwift"]),
+            targets: ["RetroSwift"]
+        ),
     ],
     targets: [
         // Targets are the basic building blocks of a package, defining a module or a test suite.
