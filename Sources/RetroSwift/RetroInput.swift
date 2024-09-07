@@ -7,6 +7,9 @@ public struct RetroInput {
     /// which player this input is assigned too.
     public internal(set) var playerNo: Int
     
+    /// whether the iputed has updated since last check
+    public var updated: Bool
+    
     /// initialise `RetroInput` with Name and Player Number
     ///
     /// `RetroInput` will be initialised with the following properties
@@ -20,6 +23,7 @@ public struct RetroInput {
         self.name = name
         self.active = false
         self.playerNo = playerNo
+        self.updated = false
     }
     
     /// initialise `RetroInput` with Name
@@ -37,5 +41,6 @@ public struct RetroInput {
         self.name = name
         self.active = false
         self.playerNo = 1
+        self.updated = false
     }
 }
