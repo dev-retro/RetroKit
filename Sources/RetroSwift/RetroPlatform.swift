@@ -6,11 +6,24 @@ public protocol RetroPlatform {
     var platformName: String { get set }
     var platformDescription: String { get set }
 
-    mutating func listInputs() -> [RetroInput]
-    mutating func update(inputs: [RetroInput])
+    func listInputs() -> [RetroInput]
+    func update(inputs: [RetroInput])
     
-    mutating func setup() -> Bool
-    mutating func start() -> Bool
-    mutating func pause() -> Bool
-    mutating func stop() -> Bool
+    func listSettings() throws -> String
+    func setup(settings: String) throws -> Bool
+    
+    
+    func start() -> Bool
+    func pause() -> Bool
+    func stop() -> Bool
+    
+    func load(file: [UInt8])
+    
+    
+}
+
+extension RetroPlatform {
+    public func setup(settings: String) throws -> Bool {
+        return false
+    }
 }
