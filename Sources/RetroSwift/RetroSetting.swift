@@ -7,13 +7,17 @@
 
 import Foundation
 
-public protocol RetroSetting: Codable {
-    associatedtype Value: Codable
-    var name: String { get }
-    var type: RetroSettingType { get }
-    var value: Value { get set }
+public protocol RetroSetting {
+    associatedtype T
+    var name: String { get set }
+    var displayName: String { get set }
+    var type: RetroSettingType { get set }
+    var displayValue: String? { get }
+    var value: T { get set }
 }
 
 public enum RetroSettingType: String, Codable {
     case file
 }
+
+
