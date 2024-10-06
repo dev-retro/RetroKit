@@ -12,6 +12,8 @@ public protocol RetroPlatform {
     var platformName: String { get set }
     /// The description of the platform
     var platformDescription: String { get set }
+    /// Debug state for the platform
+    var debugState: RetroState { get set }
     
     /// List of Inputs for this platform
     func listInputs() -> [RetroInput]
