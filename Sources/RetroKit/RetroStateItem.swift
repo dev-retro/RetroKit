@@ -6,7 +6,6 @@
 //
 
 import Foundation
-import SwiftUI
 
 @Observable
 /// Holds state value of the platform library
