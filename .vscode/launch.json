@@ -1,0 +1,26 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "lldb",
+            "request": "launch",
+            "args": [],
+            "cwd": "${workspaceFolder:retrokit}",
+            "name": "Debug Retro",
+            "program": "${workspaceFolder:retrokit}/.build/debug/Retro",
+            "preLaunchTask": "swift: Build Debug Retro"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "args": [],
+            "cwd": "${workspaceFolder:retrokit}",
+            "name": "Release Retro",
+            "program": "${workspaceFolder:retrokit}/.build/release/Retro",
+            "preLaunchTask": "swift: Build Release Retro"
+        }
+    ]
+}
