@@ -8,18 +8,18 @@
             "type": "lldb",
             "request": "launch",
             "args": [],
-            "cwd": "${workspaceFolder:retrokit}",
+            "cwd": "${workspaceFolder:RetroKit}",
             "name": "Debug Retro",
-            "program": "${workspaceFolder:retrokit}/.build/debug/Retro",
+            "program": "${workspaceFolder:RetroKit}/.build/debug/Retro",
             "preLaunchTask": "swift: Build Debug Retro"
         },
         {
             "type": "lldb",
             "request": "launch",
             "args": [],
-            "cwd": "${workspaceFolder:retrokit}",
+            "cwd": "${workspaceFolder:RetroKit}",
             "name": "Release Retro",
-            "program": "${workspaceFolder:retrokit}/.build/release/Retro",
+            "program": "${workspaceFolder:RetroKit}/.build/release/Retro",
             "preLaunchTask": "swift: Build Release Retro"
         }
     ]
