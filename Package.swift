@@ -7,7 +7,7 @@ let package = Package(
     name: "RetroKit",
     platforms: [
         .macOS(.v14),
-        .iOS(.v17)
+        .iOS(.v17),
     ],
     products: [
         // Products define the executables and libraries a package produces, making them visible to other packages.
@@ -17,9 +17,9 @@ let package = Package(
             targets: ["RetroKit"]
         ),
         .executable(
-            name: "Retro", 
+            name: "Retro",
             targets: ["Retro"]
-        )
+        ),
     ],
     dependencies: [
         .package(url: "https://github.com/apple/swift-docc-plugin", from: "1.0.0"),
@@ -30,7 +30,8 @@ let package = Package(
         // Targets can depend on other targets in this package and products from dependencies.
         .target(
             name: "RetroKit",
-            path: "Sources/RetroKit"),
+            path: "Sources/RetroKit"
+        ),
         .executableTarget(
             name: "Retro",
             dependencies: [

@@ -28,5 +28,3 @@ public enum RetroSettingType: String, Codable {
     /// This setting is for inputting a file
     case file
 }
-
-

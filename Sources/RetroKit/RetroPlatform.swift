@@ -14,7 +14,7 @@ public protocol RetroPlatform {
     var platformDescription: String { get set }
     /// Debug state for the platform
     var debugState: RetroState { get set }
-    
+
     /// List of Inputs for this platform
     func listInputs() -> [RetroInput]
     /// Update the inputs for this platform
@@ -23,8 +23,7 @@ public protocol RetroPlatform {
     /// Update the settings for this platform
     /// - Parameter settings: The group of settings to update
     func update(settings: some RetroSettings)
-    
-    
+
     /// Start the platform
     /// - Returns: true if the platform started successfully else will return false
     func start() -> Bool
@@ -32,10 +31,9 @@ public protocol RetroPlatform {
     /// - Returns: true if the platform paused successfully else will return false
     func pause() -> Bool
     /// Stop the platform
-    /// - Returns: true if the platform stopped successfully else will return false 
+    /// - Returns: true if the platform stopped successfully else will return false
     func stop() -> Bool
     /// load a file into the platform
     /// - Parameter file: the file to load
     func load(file: [UInt8])
-    
 }

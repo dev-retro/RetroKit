@@ -8,4 +8,4 @@
 import Foundation
 
 /// Holds the state of a platform library at any given point in time
-public protocol RetroState { }
+public protocol RetroState {}

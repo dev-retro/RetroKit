@@ -1,4 +1,3 @@
-
 @main
 struct RetroCLI {
     static func main() {

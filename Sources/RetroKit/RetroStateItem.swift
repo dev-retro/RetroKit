@@ -7,8 +7,8 @@
 
 import Foundation
 
-@Observable
 /// Holds state value of the platform library
+@Observable
 public class RetroStateItem<Value> {
     /// The name of the state
     public var name: String
@@ -18,7 +18,7 @@ public class RetroStateItem<Value> {
     public var type: RetroStateType
     /// The value of the state
     public var value: Value
-    
+
     public init(name: String, displayName: String, type: RetroStateType, value: Value) {
         self.name = name
         self.displayName = displayName
