@@ -7,7 +7,7 @@
 
 import Foundation
 
-@Observable
+// @Observable
 /// Holds state value of the platform library
 public class RetroStateItem<Value> {
     /// The name of the state
