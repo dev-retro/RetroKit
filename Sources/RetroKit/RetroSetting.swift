@@ -12,13 +12,13 @@ public protocol RetroSetting {
     /// The type of the setting's value
     associatedtype T
     /// The name of the setting
-    var name: String { get set }
+    static var name: String { get }
     /// The display name of the setting
-    var displayName: String { get set }
+    var displayName: String { get }
     /// The type of the setting
-    var type: RetroSettingType { get set }
+    var type: RetroSettingType { get }
     /// The what to display when the value of the setting is set
-    var displayValue: String? { get }
+    var displayValue: String? { get set }
     /// The value of the setting
     var value: T { get set }
 }
@@ -28,5 +28,4 @@ public enum RetroSettingType: String, Codable {
     /// This setting is for inputting a file
     case file
 }
-
 

@@ -14,15 +14,16 @@ public protocol RetroPlatform {
     var platformDescription: String { get set }
     /// Debug state for the platform
     var debugState: RetroState { get set }
+    /// List settings for this platform
+    var settings: RetroSettings { get set }
     
     /// List of Inputs for this platform
     func listInputs() -> [RetroInput]
     /// Update the inputs for this platform
     /// - Parameter inputs: list of inputs to update
     func update(inputs: [RetroInput])
-    /// Update the settings for this platform
-    /// - Parameter settings: The group of settings to update
-    func update(settings: some RetroSettings)
+    /// Update Settings
+    func update(settings: RetroSettings)
     
     
     /// Start the platform
