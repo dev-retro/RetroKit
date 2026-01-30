@@ -12,8 +12,6 @@ public protocol RetroPlatform {
     var platformName: String { get set }
     /// The description of the platform
     var platformDescription: String { get set }
-    /// Debug state for the platform
-    var debugState: RetroState { get set }
     /// List settings for this platform
     var settings: RetroSettings { get set }
     
@@ -38,5 +36,12 @@ public protocol RetroPlatform {
     /// load a file into the platform
     /// - Parameter file: the file to load
     func load(file: [UInt8])
+
+    /// Returns the current display framebuffer pixels.
+    /// Contract (for all platforms):
+    /// - Row-major order (left-to-right, top-to-bottom)
+    /// - Width and height are fixed per platform and must be documented by the implementation
+    /// - Each Int is a packed pixel in 0xAARRGGBB (ARGB 8:8:8:8)
+    func viewPort() -> [Int]
     
 }

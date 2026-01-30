@@ -1,10 +1,3 @@
-//
-//  RetroSetting.swift
-//  RetroSwift
-//
-//  Created by Glenn Hevey on 30/9/2024.
-//
-
 import Foundation
 
 /// A protocol for a setting that can be used to configure a platform library setting
@@ -25,7 +18,10 @@ public protocol RetroSetting {
 
 /// The setting types that can be used to configure a platform library setting
 public enum RetroSettingType: String, Codable {
-    /// This setting is for inputting a file
     case file
+    case string
+    case number
+    case bool
+    case `enum`
+    case binary
 }
-
